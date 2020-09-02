@@ -3,7 +3,7 @@ FROM hkhajanchi/hacking-dockerfile:latest
 # Install some necessary build packages 
 RUN apt-get update && \ 
     apt-get install -y \
-    ninja  
+    ninja-build  
     
 # Build LLVM 10.0 using Simone's LLVM installer repo 
 RUN git clone https://github.com/scampanoni/LLVM_Installer &&\
