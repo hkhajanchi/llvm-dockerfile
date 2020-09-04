@@ -14,4 +14,9 @@ RUN git clone https://github.com/scampanoni/LLVM_Installer &&\
     make -j64 debug 
 
 # Generate Ninja build files for recompiling backend 
-RUN cmake . -G ninja 
+RUN cd 10.0.0 && \ 
+    cd src/ && mkdir ninja_build && cd ninja_build &&\
+    cmake .. -G Ninja && \
+    ninja llc 
+
+
